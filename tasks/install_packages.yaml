@@ -1,0 +1,6 @@
+- name: Install Default packages
+  yum: 
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - "{{ packages }}"

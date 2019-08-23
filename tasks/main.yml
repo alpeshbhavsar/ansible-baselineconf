@@ -1,2 +1,4 @@
 ---
 # tasks file for baselineconf
+- name: Install Basic Packages
+  include_tasks: install_packages.yaml
