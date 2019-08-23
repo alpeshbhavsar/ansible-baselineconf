@@ -1,2 +1,13 @@
 ---
 # vars file for baselineconf
+
+
+_packages:
+  all:
+    - vim
+    - unzip
+    - wget
+  CentOS:
+    - openssh-server
+
+packages: "{{ _packages['all'] + ( _packages[ansible_distribution] | default([]) ) }}"

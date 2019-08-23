@@ -2,3 +2,10 @@
 # tasks file for baselineconf
 - name: Install Basic Packages
   include_tasks: install_packages.yaml
+
+- name: Configuring security context 
+  include_tasks: configure_selinux.yaml
+
+- name: Stop firewall service
+  include_tasks: configure_firewall.yaml
+
