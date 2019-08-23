@@ -1,7 +1,7 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+This playbook is written to apply base configuration on operating system once fresh OS is installed. I mostly follow few steps once OS is ready, so want to leverage automated installation/configuration through Ansible. This playbook should work for both CentOS & Ubuntu.
 
 Requirements
 ------------
