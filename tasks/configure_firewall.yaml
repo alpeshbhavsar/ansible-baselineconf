@@ -6,7 +6,6 @@
   when:
       - ansible_facts['distribution'] == "CentOS"
       - ansible_facts['distribution_major_version'] == "7"
-
 - name: Stop Firewall Service
   service:
     name: iptables
@@ -15,7 +14,6 @@
   when:
       - ansible_facts['distribution'] == "CentOS"
       - ansible_facts['distribution_major_version'] == "6"
-
 - name: Stop Firewall Service
   systemd:
     name: firewalld
@@ -24,5 +22,3 @@
   when:
       - ansible_facts['distribution'] == "CentOS"
       - ansible_facts['distribution_major_version'] == "7"
-
-

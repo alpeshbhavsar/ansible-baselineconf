@@ -10,5 +10,3 @@
     path: /tmp/hosts
     line: '{{ ansible_default_ipv4.address }} {{ hostname }}'
   when: hostname != 'localhost'
-
-
