@@ -11,3 +11,4 @@ _packages:
     - openssh-server
 
 packages: "{{ _packages['all'] + ( _packages[ansible_distribution] | default([]) ) }}"
+

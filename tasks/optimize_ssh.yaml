@@ -1,0 +1,16 @@
+- name: Disable use for Dynamic DNS for ssh connection
+  replace:
+    path: /etc/ssh/sshd_config
+    regexp: '(.*)UseDNS(.*)'
+    replace: 'UseDNS no'
+    #  notify: restart sshd
+  when: ansible_facts['os_family'] == 'RedHat'
+
+- name: Disable GSSAPI Auth for ssh connection
+  replace:
+    path: /etc/ssh/sshd_config
+    regexp: '(.*)GSSAPIAuthentication(.*)'
+    replace: 'GSSAPIAuthentication no'
+  notify: restart sshd
+  when: ansible_facts['os_family'] == 'RedHat'
+

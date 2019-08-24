@@ -9,3 +9,9 @@
 - name: Stop firewall service
   include_tasks: configure_firewall.yaml
 
+- name: Update Hostname 
+  include_tasks: update_hostname.yaml
+
+- name: Optimize configuration
+  include_tasks: optimize_ssh.yaml
+
