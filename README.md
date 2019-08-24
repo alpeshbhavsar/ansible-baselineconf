@@ -27,7 +27,7 @@ Example Playbook
 ----------------
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
+<pre>
 ansible-playbook init.yaml -e "hostname=samplehostname"
 init.yaml
     - name: Setup environment
@@ -35,7 +35,7 @@ init.yaml
       become: yes
       roles:
         - role: alpeshbhavsar.ansible_baselineconf
-
+</pre>
 
 License
 -------
