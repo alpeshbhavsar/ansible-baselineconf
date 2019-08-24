@@ -16,7 +16,7 @@ Any pre-requisites that may not be covered by Ansible itself or the role should 
 Role Variables
 --------------
 
-(1) hostname - This variable has been defined in default/main.yaml file. When you want to set hostname to something else other than localhost, you can specify hostname by -e "hostname=samplehostname" in ansible-playbook command.
+- hostname - This variable has been defined in default/main.yaml file. When you want to set hostname to something else other than localhost, you can specify hostname by -e "hostname=samplehostname" in ansible-playbook command.
 
 Dependencies
 ------------
