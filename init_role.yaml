@@ -1,5 +1,5 @@
 - name: Setup environment
-  hosts: all
+  hosts: ansiblenode2
   become: yes
   roles: 
     - role: ../baselineconf

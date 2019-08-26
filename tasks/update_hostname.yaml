@@ -1,12 +1,17 @@
+- name: Update Hostname
+  hostname:
+    name: "{{ hostname }}"
+  when: hostname  != 'localhost'  
 - name: Remove old Hosts file entry if exists
   lineinfile:
-    path: /tmp/hosts
+    path: /etc/hosts
     backup: yes
     regexp: "{{ hostname }}"
     state: absent
   when: hostname  != 'localhost'
 - name: Add hosts file entry
   lineinfile:
-    path: /tmp/hosts
+    path: /etc/hosts
+    create: yes
     line: '{{ ansible_default_ipv4.address }} {{ hostname }}'
   when: hostname != 'localhost'

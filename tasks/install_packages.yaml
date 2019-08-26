@@ -4,3 +4,13 @@
     state: installed
   with_items:
     - "{{ packages }}"
+  when: ansible_facts['distribution'] == "CentOS"
+
+- name: Install Default Packages
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+    state: present
+  with_items:
+    - "{{ packages }}"
+  when: ansible_facts['distribution'] == "Ubuntu"

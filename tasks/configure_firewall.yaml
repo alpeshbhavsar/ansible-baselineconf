@@ -16,9 +16,9 @@
       - ansible_facts['distribution_major_version'] == "6"
 - name: Stop Firewall Service
   systemd:
-    name: firewalld
+    name: ufw
     state: stopped
     enabled: no
   when:
-      - ansible_facts['distribution'] == "CentOS"
-      - ansible_facts['distribution_major_version'] == "7"
+      - ansible_facts['distribution'] == "Ubuntu"
+      - ansible_facts['distribution_major_version'] >= "16"
