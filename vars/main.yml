@@ -1,7 +1,5 @@
 ---
 # vars file for baselineconf
-
-
 _packages:
   all:
     - vim
@@ -9,6 +7,4 @@ _packages:
     - wget
   CentOS:
     - openssh-server
-
 packages: "{{ _packages['all'] + ( _packages[ansible_distribution] | default([]) ) }}"
-
